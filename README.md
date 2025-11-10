@@ -30,7 +30,7 @@ Here are some sources for excellent points of inspiration!
 - Post-processing effects (for more eye candy really)
 
 #### Techniques:
-As a 3D modeler, I will most likely be making a lot of things in Blender.  Blender is great because you have avenues for both 3D modeling and 2D/3D animation, as well as a lot of opportunities for proceduralism (such as geometry nodes or creating a shader/material) (a lot of potential with metaballs and physics sims as well!).  I will look into using ShaderToy and Hydra to create background effects (can also create more visualizer components here); additional post-processing overlays can be done using art programs and software like DaVinci Resolve, which I will also be using to make the final composite.  Though I'm a beginner with TouchDesigner, I think it could be great to explore.
+As a 3D modeler, I will most likely be making a lot of things in Blender.  Blender is great because you have avenues for both 3D modeling and 2D/3D animation, as well as a lot of opportunities for proceduralism (such as geometry nodes or creating a shader/material) (a lot of potential with metaballs and physics sims as well!).  I will use ShaderToy to create background effects and visualizer components (also because I want to do some fun stuff with sdfs!); additional post-processing overlays can be done using art programs and software like DaVinci Resolve, which I will also be using to make the final composite.  Though I'm a beginner with TouchDesigner, I think it could be great to explore.
 
 #### Design:
 - How will your program fit together? Make a simple free-body diagram illustrating the pieces.
