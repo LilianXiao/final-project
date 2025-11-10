@@ -9,20 +9,28 @@ Before submitting your first milestone, _you must get your project idea and scop
 Start off by forking this repository. In your README, write a design doc to outline your project goals and implementation plan. It must include the following sections:
 
 #### Introduction
-- What motivates your project?
+All around us is cool music...but in the hands of a DJ, music can become a much more immersive experience.  We can go a step further and imagine MVs for songs, remixes, games, and more; all with colorful and expressive components that follow the tempo and beat.  Having been thoroughly intrigued by many cool visualizers and music videos in general over the years, I find this idea too inticing to pass up.
 
 #### Goal
-- What do you intend to achieve with this project?
+I intend on creating a short music video for a personal music mix (we'll see how far we get haha), consisting of music from DV-i, Psychoangel, Metaroom, and Machine Girl (depending on how much time I have, I may end up just doing it for one piece).  All these artists share something in common; that is heavy use of sampling, breakbeats (sometimes), electronic music/synths, and whatever you can imagine for a techno rave scene.  I will start off attempting to build a visualizer and work with Resonance by DV-i, then add in some more post-processing and create a nice composite video.
 
 #### Inspiration/reference:
-- You must have some form of reference material for your final project. Your reference may be a research paper, a blog post, some artwork, a video, another class at Penn, etc.  
-- Include in your design doc links to and images of your reference material.
+Here are some sources for excellent points of inspiration!
+- https://www.youtube.com/watch?v=uxeE8zpwsqw
+- https://www.youtube.com/watch?v=TDoQDcm4hIQ
+- https://www.youtube.com/watch?v=btTH2bz_eg8
+- https://www.youtube.com/watch?v=ure6OT0LwtM
+- https://www.youtube.com/watch?v=-YAWcks7kOg
+- https://www.youtube.com/watch?v=E-kVV_5_Th4
 
 #### Specification:
-- Outline the main features of your project.
+- A "central" visualizer, involving something that very clearly visually follows the audio sample
+- Animated 3D annd 2D components
+- Possibly elements of traditional animation
+- Post-processing effects (for more eye candy really)
 
 #### Techniques:
-- What are the main technical/algorithmic tools you’ll be using? Give an overview, citing specific papers/articles.
+As a 3D modeler, I will most likely be making a lot of things in Blender.  Blender is great because you have avenues for both 3D modeling and 2D/3D animation, as well as a lot of opportunities for proceduralism (such as geometry nodes or creating a shader/material) (a lot of potential with metaballs and physics sims as well!).  I will look into using ShaderToy and Hydra to create background effects (can also create more visualizer components here); additional post-processing overlays can be done using art programs and software like DaVinci Resolve, which I will also be using to make the final composite.  Though I'm a beginner with TouchDesigner, I think it could be great to explore.
 
 #### Design:
 - How will your program fit together? Make a simple free-body diagram illustrating the pieces.
