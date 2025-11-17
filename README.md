@@ -33,21 +33,27 @@ Here are some sources for excellent points of inspiration!
 As a 3D modeler, I will most likely be making a lot of things in Blender.  Blender is great because you have avenues for both 3D modeling and 2D/3D animation, as well as a lot of opportunities for proceduralism (such as geometry nodes or creating a shader/material) (a lot of potential with metaballs and physics sims as well!).  I will use ShaderToy to create background effects and visualizer components (also because I want to do some fun stuff with sdfs!); additional post-processing overlays can be done using art programs and software like DaVinci Resolve, which I will also be using to make the final composite.  Though I'm a beginner with TouchDesigner, I think it could be great to explore.
 
 #### Design:
-- How will your program fit together? Make a simple free-body diagram illustrating the pieces.
+Blender render + Shadertoy + traditionally animated composite; will make use of video editing software for compositing and some extra post-processing.
 
 #### Timeline:
-- Create a week-by-week set of milestones for each person in your group. Make sure you explicitly outline what each group member's duties will be.
+- Makea da video
 
-Submit your Design doc as usual via pull request against this repository.
+
 ## Milestone 1: Implementation part 1 (due 11/12)
-Begin implementing your engine! Don't worry too much about polish or parameter tuning -- this week is about getting together the bulk of your generator implemented. By the end of the week, even if your visuals are crude, the majority of your generator's functionality should be done.
+It's a little goofy to keep updating the .blend file, but here are some screenshots and a video demo of the current visualizer in Blender.  This is a standard horizontal cube visualizer, and I created a procedural noise shader for the coloring.  However, because this method of visualizer makes use of a Blender add-on, I am also working on a "spherical" visualizer with a mesh that deforms based on the music sample.
 
-Put all your code in your forked repository.
+The shader itself makes use of blending voronoi + fbm noise and offsetting color, emission, distortion, and detail parameters using time (frame) + sine functions.  This is currently being rendered in eevee, but I'd like to figure out how to add some subtle bloom/glow.
 
-Submission: Add a new section to your README titled: Milestone #1, which should include
-- written description of progress on your project goals. If you haven't hit all your goals, what's giving you trouble?
-- Examples of your generators output so far
-We'll check your repository for updates. No need to create a new pull request.
+<img width="650" height="398" alt="image" src="https://github.com/user-attachments/assets/e2c31637-4f69-40dd-b842-afc71e7dd824" />
+
+<img width="642" height="390" alt="image" src="https://github.com/user-attachments/assets/8ccbcc44-503c-4332-9fad-dab04b91f309" />
+
+<img width="863" height="653" alt="image" src="https://github.com/user-attachments/assets/a330616f-abd5-430d-a856-c91917cb767b" />
+
+Short video demo:
+https://drive.google.com/file/d/1Azspsej8MV49RC9JZOpfTU-JfBLviWNv/view?usp=sharing
+
+
 ## Milestone 2: Implementation part 2 (due 11/24)
 We're over halfway there! This week should be about fixing bugs and extending the core of your generator. Make sure by the end of this week _your generator works and is feature complete._ Any core engine features that don't make it in this week should be cut! Don't worry if you haven't managed to exactly hit your goals. We're more interested in seeing proof of your development effort than knowing your planned everything perfectly. 
 
