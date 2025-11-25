@@ -65,6 +65,13 @@ https://www.shadertoy.com/view/W3Bfzd
 
 I used the texture function on the music channel so I could find frequency/amplitude, then overlaid it with a noise generator + fbm to give it somoe more visual grunge.
 
+To figure out how to make an actual wave using the audio texture, I referenced (the goat) iq's input-sound work.  Shadertoy stores sound as a 512 x 2 resolution texture, where there are 2 "strips" (fft and waveform).
+To get the "wave visualizer" I fetch the waveform data at each index using texelFetch (texelFetch is raw integer texel coordinates, so I use this instead of just texture, which does normalized coordinates and additional filtering).
+
+<img width="473" height="259" alt="image" src="https://github.com/user-attachments/assets/825dc51f-b72c-4676-a340-cb8a80d24ddf" />
+
+<img width="472" height="263" alt="image" src="https://github.com/user-attachments/assets/2e84b7f0-9028-4890-b5ef-3ee8e17c5076" />
+
 Next I will be working on making my blender visualizer more complex, making some animated sdfs and additional visual effects, and compositing everything together for the final submission.
 
 ## Final submission (due 12/1)
