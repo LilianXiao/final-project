@@ -36,7 +36,7 @@ As a 3D modeler, I will most likely be making a lot of things in Blender.  Blend
 Blender render + Shadertoy + traditionally animated composite; will make use of video editing software for compositing and some extra post-processing.
 
 #### Timeline:
-- Makea da video
+- I make a da video
 
 
 ## Milestone 1: Implementation part 1 (due 11/12)
@@ -55,16 +55,17 @@ https://drive.google.com/file/d/1Azspsej8MV49RC9JZOpfTU-JfBLviWNv/view?usp=shari
 
 
 ## Milestone 2: Implementation part 2 (due 11/24)
-We're over halfway there! This week should be about fixing bugs and extending the core of your generator. Make sure by the end of this week _your generator works and is feature complete._ Any core engine features that don't make it in this week should be cut! Don't worry if you haven't managed to exactly hit your goals. We're more interested in seeing proof of your development effort than knowing your planned everything perfectly. 
+I worked on creating the visualizer background; the main inspiration is from DV-i's original dj set video, which the song I'm using (resonance) is included in.
 
-Put all your code in your forked repository.
+https://www.shadertoy.com/view/W3Bfzd
 
-Submission: Add a new section to your README titled: Milestone #3, which should include
-- written description of progress on your project goals. If you haven't hit all your goals, what did you have to cut and why? 
-- Detailed output from your generator, images, video, etc.
-We'll check your repository for updates. No need to create a new pull request.
+<img width="469" height="260" alt="image" src="https://github.com/user-attachments/assets/9581055b-9cd8-43fc-92b0-c6318f37d204" />
 
-Come to class on the due date with a WORKING COPY of your project. We'll be spending time in class critiquing and reviewing your work so far.
+<img width="465" height="262" alt="image" src="https://github.com/user-attachments/assets/efff010c-ec00-4783-afe7-74625a39cbd5" />
+
+I used the texture function on the music channel so I could find frequency/amplitude, then overlaid it with a noise generator + fbm to give it somoe more visual grunge.
+
+Next I will be working on making my blender visualizer more complex, making some animated sdfs and additional visual effects, and compositing everything together for the final submission.
 
 ## Final submission (due 12/1)
 Time to polish! Spen this last week of your project using your generator to produce beautiful output. Add textures, tune parameters, play with colors, play with camera animation. Take the feedback from class critques and use it to take your project to the next level.
