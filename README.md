@@ -72,10 +72,17 @@ To get the "wave visualizer" I fetch the waveform data at each index using texel
 
 <img width="472" height="263" alt="image" src="https://github.com/user-attachments/assets/2e84b7f0-9028-4890-b5ef-3ee8e17c5076" />
 
-Next I will be working on making my blender visualizer more complex, making some animated sdfs and additional visual effects, and compositing everything together for the final submission.
+Next I will be working on making the shadertoy more complex, making some animated sdfs and additional visual effects, and compositing everything together for the final submission.
 
 ## Final submission (due 12/1)
-Time to polish! Spen this last week of your project using your generator to produce beautiful output. Add textures, tune parameters, play with colors, play with camera animation. Take the feedback from class critques and use it to take your project to the next level.
+There are now four main layers to the shadertoy: an inverted fbm video pass, a sobel filter pass, an animated SDF pass with additional fbm post processing, and the main image (which contains the main music visualizer component as well as a fun little speaker sdf that is animated using the amplitude of the waveform).  I created multiple buffers and transferred their outputs to my main image using the channels; additionally, I am using the shadertoy web extension Custom Textures (https://chromewebstore.google.com/detail/shadertoy-custom-texures/jgeibpcndpjboeebilehgbpkopkgkjda), which allows one to drop in images, video mp4s, and soundfiles into channels as textures.  This adds another level of customizability for the visuals!
+
+Some more details on implementation:
+- To achieve the noisy aberration effect on some passes, I offset the uvs by fbm noise with sine of time to cause the shifting
+- I referenced iq's sdfs and my earlier work with the procedural faces lab to make the animated sdfs.  They oscillate using sine on time, as well as changing size so it looks like they're zooming in and out
+- To make the "speaker" sdf I created three sdf spheres, with the concave speaker being the result of smoothSubtraction between two slightly offset spheres.  I thought it was nice to do size deform using the input sound waveform amplitude; it looks a little like something you'd see in an early animusic video haha
+
+The compositing part of everything is just mixing the layers and doing some fine tuning with blending and frequency parameters so the visuals can all be seen.  I really think that the early 2000's hypermedia basement dj party vibe is captured by the combination of these visuals!  Again, a lot of inspiration from psychoangel and their dj set visualizers.
 
 Submission:
 - Push all your code / files to your repository
@@ -83,57 +90,3 @@ Submission:
 - Update your README with two sections 
   - final results with images and a live demo if possible
   - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?
-
-## Topic Suggestions
-
-### Create a generator in Houdini
-
-### A CLASSIC 4K DEMO
-- In the spirit of the demo scene, create an animation that fits into a 4k executable that runs in real-time. Feel free to take inspiration from the many existing demos. Focus on efficiency and elegance in your implementation.
-- Example: 
-  - [cdak by Quite & orange](https://www.youtube.com/watch?v=RCh3Q08HMfs&list=PLA5E2FF8E143DA58C)
-
-### A RE-IMPLEMENTATION
-- Take an academic paper or other pre-existing project and implement it, or a portion of it.
-- Examples:
-  - [2D Wavefunction Collapse Pokémon Town](https://gurtd.github.io/566-final-project/)
-  - [3D Wavefunction Collapse Dungeon Generator](https://github.com/whaoran0718/3dDungeonGeneration)
-  - [Reaction Diffusion](https://github.com/charlesliwang/Reaction-Diffusion)
-  - [WebGL Erosion](https://github.com/LanLou123/Webgl-Erosion)
-  - [Particle Waterfall](https://github.com/chloele33/particle-waterfall)
-  - [Voxelized Bread](https://github.com/ChiantiYZY/566-final)
-
-### A FORGERY
-Taking inspiration from a particular natural phenomenon or distinctive set of visuals, implement a detailed, procedural recreation of that aesthetic. This includes modeling, texturing and object placement within your scene. Does not need to be real-time. Focus on detail and visual accuracy in your implementation.
-- Examples:
-  - [The Shrines](https://github.com/byumjin/The-Shrines)
-  - [Watercolor Shader](https://github.com/gracelgilbert/watercolor-stylization)
-  - [Sunset Beach](https://github.com/HanmingZhang/homework-final)
-  - [Sky Whales](https://github.com/WanruZhao/CIS566FinalProject)
-  - [Snail](https://www.shadertoy.com/view/ld3Gz2)
-  - [Journey](https://www.shadertoy.com/view/ldlcRf)
-  - [Big Hero 6 Wormhole](https://2.bp.blogspot.com/-R-6AN2cWjwg/VTyIzIQSQfI/AAAAAAAABLA/GC0yzzz4wHw/s1600/big-hero-6-disneyscreencaps.com-10092.jpg)
-
-### A GAME LEVEL
-- Like generations of game makers before us, create a game which generates an navigable environment (eg. a roguelike dungeon, platforms) and some sort of goal or conflict (eg. enemy agents to avoid or items to collect). Aim to create an experience that will challenge players and vary noticeably in different playthroughs, whether that means procedural dungeon generation, careful resource management or an interesting AI model. Focus on designing a system that is capable of generating complex challenges and goals.
-- Examples:
-  - [Rhythm-based Mario Platformer](https://github.com/sgalban/platformer-gen-2D)
-  - [Pokémon Ice Puzzle Generator](https://github.com/jwang5675/Ice-Puzzle-Generator)
-  - [Abstract Exploratory Game](https://github.com/MauKMu/procedural-final-project)
-  - [Tiny Wings](https://github.com/irovira/TinyWings)
-  - Spore
-  - Dwarf Fortress
-  - Minecraft
-  - Rogue
-
-### AN ANIMATED ENVIRONMENT / MUSIC VISUALIZER
-- Create an environment full of interactive procedural animation. The goal of this project is to create an environment that feels responsive and alive. Whether or not animations are musically-driven, sound should be an important component. Focus on user interactions, motion design and experimental interfaces.
-- Examples:
-  - [The Darkside](https://github.com/morganherrmann/thedarkside)
-  - [Music Visualizer](https://yuruwang.github.io/MusicVisualizer/)
-  - [Abstract Mesh Animation](https://github.com/mgriley/cis566_finalproj)
-  - [Panoramical](https://www.youtube.com/watch?v=gBTTMNFXHTk)
-  - [Bound](https://www.youtube.com/watch?v=aE37l6RvF-c)
-
-### YOUR OWN PROPOSAL
-- You are of course welcome to propose your own topic . Regardless of what you choose, you and your team must research your topic and relevant techniques and come up with a detailed plan of execution. You will meet with some subset of the procedural staff before starting implementation for approval.
