@@ -38,9 +38,8 @@ Blender render + Shadertoy + traditionally animated composite; will make use of 
 #### Timeline:
 - I make a da video
 
-
 ## Milestone 1: Implementation part 1 (due 11/12)
-It's a little goofy to keep updating the .blend file, but here are some screenshots and a video demo of the current visualizer in Blender.  This is a standard horizontal cube visualizer, and I created a procedural noise shader for the coloring.  However, because this method of visualizer makes use of a Blender add-on, I am also working on a "spherical" visualizer with a mesh that deforms based on the music sample.
+It's a little goofy to keep updating the .blend file, but here are some screenshots and a video demo of the current visualizer in Blender.  This is a standard horizontal cube visualizer, and I created a procedural noise shader for the coloring.  I may consider making a "spherical" visualizer with a mesh that deforms based on the music sample.
 
 The shader itself makes use of blending voronoi + fbm noise and offsetting color, emission, distortion, and detail parameters using time (frame) + sine functions.  This is currently being rendered in eevee, but I'd like to figure out how to add some subtle bloom/glow.
 
@@ -53,6 +52,7 @@ The shader itself makes use of blending voronoi + fbm noise and offsetting color
 Short video demo:
 https://drive.google.com/file/d/1Azspsej8MV49RC9JZOpfTU-JfBLviWNv/view?usp=sharing
 
+As an update, I may not actually end up using this visualizer component, if I end up making a lot of progress in my shadertoy!
 
 ## Milestone 2: Implementation part 2 (due 11/24)
 I worked on creating the visualizer background; the main inspiration is from DV-i's original dj set video, which the song I'm using (resonance) is included in.
@@ -84,9 +84,12 @@ Some more details on implementation:
 
 The compositing part of everything is just mixing the layers and doing some fine tuning with blending and frequency parameters so the visuals can all be seen.  I really think that the early 2000's hypermedia basement dj party vibe is captured by the combination of these visuals!  Again, a lot of inspiration from psychoangel and their dj set visualizers.
 
-Submission:
-- Push all your code / files to your repository
-- Come to class ready to present your finished project
-- Update your README with two sections 
-  - final results with images and a live demo if possible
-  - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?
+Some demo snippets! (kinda compressed so I can embed them here, but there are some short mp4s in the repo itself!)
+
+https://github.com/user-attachments/assets/e508f853-ff3b-444c-af7e-1c73594ec44f
+https://github.com/user-attachments/assets/7e7530f6-c62a-4f32-8c35-9ecf47d4d6a9
+https://github.com/user-attachments/assets/41ccf098-886f-4327-bf5f-3e9a38423c44
+
+## Post mortem thoughts
+I ended up scrapping the component I made in Blender, because I decided I wanted to try implementing everything in my shadertoy; I also ended up deciding that the blender visualizer wouldn't really add a lot to the shadertoy visualizer, which is why I ended up focusing on my shadertoy for the rest of the process.  However, I still took some inspiration from when I tinkered around with the blender visualizer in milestone 1.
+I'd like to make a full render on some demo dj set, either one I like online or just a couple songs I enjoy whipped together.  However, this recording may take a while, so I'll likely try to add that sometime later.  In the meantime, I'm very happy with how my music visualizer tool turned out!  It was a great learning experience with making multipass shaders, using multiple buffers and channels, as well as putting together a lot of the procedural skills I learned over the course of 5660.
